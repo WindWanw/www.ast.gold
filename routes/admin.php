@@ -19,4 +19,8 @@ Route::group([
 ],function($router){
 
     $router->get('test','TestController@index');
+
+    $router->get("publish",function(){
+        Redis::publish("Chinese","Welcome to China!");
+    });
 });
