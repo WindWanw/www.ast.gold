@@ -47,6 +47,7 @@ class Kernel extends HttpKernel
         'admin' => [
             'throttle:60,1',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            // \App\Http\Middleware\ResponseMiddleware::class,
         ],
     ];
 
