@@ -12,40 +12,47 @@ class TestController extends Controller
 
     public function index(Request $r)
     {
-        $list = [
-            [
-                "path" => '/home',
-                "name" => 'home',
-                "meta" => [
-                    "parent" => '',
-                    "name" => '首页',
-                    "iconfont" => 'iconfont iconhome_icon',
-                    "needLogin" => true,
-                ],
-                "children" => [],
-            ],
-            [
-                "path" => '/announcementManage',
-                "name" => 'announcementManage',
-                "redirect" => '/broadcast',
-                "meta" => [
-                    "parent" => '',
-                    "name" => '公告管理',
-                    "iconfont" => 'iconfont iconicon-paper',
-                    "needLogin" => true,
-                ],
-                "children" => [[
-                    "path" => '/broadcast',
-                    "name" => 'broadcast',
-                    "meta" => [
-                        "parent" => '公告管理',
-                        "name" => '系统广播',
-                        "iconfont" => 'iconfont iconzhaobiaogonggao',
-                        "needLogin" => true,
-                    ],
-                ]],
-            ],
-        ];
+        // $list = [
+        //     [
+        //         "path" => '/layout',
+        //         "name" => 'layout',
+        //         "component" => "layout",
+        //         "meta" => [
+        //             "parent" => '',
+        //             "name" => '首页1',
+        //             "iconfont" => 'iconfont iconhome_icon',
+        //             "isLogin" => true,
+        //         ],
+        //         "children" => [
+        //             [
+        //                 "path" => '/home',
+        //                 "name" => 'home',
+        //                 "component" => "home",
+        //                 "meta" => [
+        //                     "parent" => '',
+        //                     "name" => '首页',
+        //                     "iconfont" => 'iconfont iconhome_icon',
+        //                     "isLogin" => true,
+        //                 ],
+        //                 "children" => [],
+        //             ],
+        //             [
+        //                 "path" => '/notFound',
+        //                 "name" => 'notFound',
+        //                 "component" => "notFound",
+        //                 "meta" => [
+        //                     "parent" => '',
+        //                     "name" => '404',
+        //                     "iconfont" => 'iconfont iconhome_icon',
+        //                     "isLogin" => true,
+        //                 ],
+        //                 "children" => [],
+        //             ],
+        //         ],
+        //     ],
+        // ];
+
+        $list=\base_path();
 
         return R::ok($list);
 
