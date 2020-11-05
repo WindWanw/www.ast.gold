@@ -53,7 +53,7 @@ class TestController extends Controller
         // ];
 
         $list=\base_path();
-
+echo $list;
         return R::ok($list);
 
     }
